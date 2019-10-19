@@ -1,0 +1,15 @@
+FOR i TO 100
+    DO
+        IF i MOD 3 EQ 0 AND i MOD 5 EQ 0
+        THEN
+            print(("Fizz Buzz",newline))
+        ELIF i MOD 5 EQ 0
+        THEN
+            print(("Buzz",newline))
+        ELIF i MOD 3 EQ 0
+        THEN
+            print(("Fizz",newline))
+        ELSE
+            print((i,newline))
+        FI
+    OD

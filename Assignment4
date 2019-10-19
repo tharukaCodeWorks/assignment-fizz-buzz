@@ -1,0 +1,26 @@
+Bash: find / -type f -name "*.conf"
+
+--------------------------------------------------
+
+Pearl: 
+
+#!/usr/bin/perl -w
+
+opendir(DIR, "/");
+@files = grep(/\.conf$/,readdir(DIR));
+closedir(DIR);
+
+foreach $file (@files) {
+   print "$file\n";
+}
+
+--------------------------------------------------
+Ruby:
+
+require 'find'
+
+conf_file_paths = []
+Find.find('/') do |path|
+  conf_file_paths << path if path =~ /.*\.conf$/
+end
+
